@@ -1,8 +1,15 @@
-def printBoard():
-    print(f" 0 | 1 | 2 ")
+#function to print tic tac toe board
+def printBoard(x,y):
+    #printed board with 9 values 
+    print(f" {zero} | {one} | {two} ")
     print(f"---|---|---")
-    print(f" 3 | 4 | 5 ")
+    print(f" {tree} | {four} | {five} ")
     print(f"---|---|---")
-    print(f" 6 | 7 | 8 ")
+    print(f" {six} | {seven} | {eight} ")
+    
 if __name__ == "__main__":
-    printBoard()
+    
+    print("Welcome to Tic Tac Toe\n")
+    
+    xMove = [0,0,0,0,0,0,0,0,0]
+    oMove = [0,0,0,0,0,0,0,0,0]
