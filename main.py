@@ -79,6 +79,22 @@ def printBoard(x,y):
     print(f" {three} | {four} | {five} ")
     print(f"---|---|---")
     print(f" {six} | {seven} | {eight} ")
+#function to check if a user won the game
+def win(x,y):
+    #created a list of lists with all win conditions
+    wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+    #a loop on wins to check if a user won the game
+    for win in wins:
+        #checking if X wins 
+        if(x[win[0]]+x[win[1]]+x[win[2]]==3):
+            print("X wins")
+            return True
+        #checking if O wins
+        if(y[win[0]]+y[win[1]]+y[win[2]]==3):
+            print("O wins")
+            return True
+    #returning false if no one wins
+    return False
 #main function    
 if __name__ == "__main__":
     #two lists to keep track of where the users entered their input
@@ -109,6 +125,7 @@ if __name__ == "__main__":
             print("O's turn")
             y = int(input("Please enter the position number where you want to mark O: "))
             oMove[y] = 1
-        
+        #calling function to check if any user won
+        w = win(xMove,oMove)
         #calling function to print board with latest values
         printBoard(xMove, oMove)
