@@ -103,5 +103,5 @@ if __name__ == "__main__":
             y = int(input("Please enter the position number where you want to mark O: "))
             oMove[y] = 1
         
-    #calling function to print board with latest values
-    printBoard(xMove, oMove)
+        #calling function to print board with latest values
+        printBoard(xMove, oMove)
