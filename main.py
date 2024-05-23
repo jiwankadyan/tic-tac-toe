@@ -1,3 +1,6 @@
+#creating a custom exception class if the user enters a value less than 0 or greater than 8
+class valueError(Exception):
+    pass
 #function to print tic tac toe board
 def printBoard(x,y):
     #condition to check if user entered something at 0 position if user enters nothing on this position then printing the position number
