@@ -102,7 +102,8 @@ if __name__ == "__main__":
     oMove = [0,0,0,0,0,0,0,0,0]
     #printing welcome message
     print("Welcome to Tic Tac Toe\n")
-    
+    #printing the tic tac toe board for the first time 
+    printBoard(xMove, oMove)
     #turn variable to check who's turn it is
     turn = 1
     #a counter for how many moves has been made by both the users
