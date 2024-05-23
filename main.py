@@ -82,10 +82,13 @@ def printBoard(x,y):
     
 #main function    
 if __name__ == "__main__":
-    
+    #two lists to keep track of where the users entered their input
     xMove = [0,0,0,0,0,0,0,0,0]
     oMove = [0,0,0,0,0,0,0,0,0]
     
     print("Welcome to Tic Tac Toe\n")
-    
+    #turn variable to check who's turn it is
+    turn = 1
+        
+    #calling function to print board with latest values
     printBoard(xMove, oMove)
