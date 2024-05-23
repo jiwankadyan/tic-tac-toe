@@ -131,5 +131,7 @@ if __name__ == "__main__":
         if(w):
             print("Match over")
             break
+        #Changing the turn of the user's
+        turn = 1-turn
         #calling function to print board with latest values
         printBoard(xMove, oMove)
