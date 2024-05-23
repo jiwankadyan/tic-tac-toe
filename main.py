@@ -117,7 +117,7 @@ if __name__ == "__main__":
         i+=1
         #checking if all the moves has been exhausted by both the users if yes then ending the game
         if(i==10):
-            print("\nIt's a tie!!\nThe match is over.\n")
+            print("\nIt's a tie!!\nThe match is over.\n\n")
             break
         #checking if it's X's turn and taking input from X user to mark their move
         if(turn==1):
@@ -159,7 +159,8 @@ if __name__ == "__main__":
         w = win(xMove,oMove)
         #printing match over if one of the user wins
         if(w):
-            print("The match is over.\n")
+            print("The match is over.\n\n")
+            printBoard(xMove, oMove)
             break
         #Changing the turn of the user's
         turn = 1-turn
