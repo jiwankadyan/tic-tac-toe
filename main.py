@@ -122,13 +122,27 @@ if __name__ == "__main__":
         #checking if it's X's turn and taking input from X user to mark their move
         if(turn==1):
             print("X's turn")
-            x = int(input("Please enter the position number where you want to mark X: "))
-            xMove[x] = 1
+            try:
+                x = int(input("Please enter the position number where you want to mark X: "))
+                if(x<0 or x>8):
+                    raise valueError("Invalid input, value must be between 0 and 8")
+                if(xMove[x]==1 or oMove[x]==1):
+                    raise valueError("This position has already been marked, please choose another")
+                xMove[x] = 1
+            except valueError as e:
+                print("Error: ",e)
         #checking if it's O's turn and taking input from O user to mark their move
         if(turn==0):
             print("O's turn")
-            y = int(input("Please enter the position number where you want to mark O: "))
-            oMove[y] = 1
+            try:
+                y = int(input("Please enter the position number where you want to mark O: "))
+                if(y<0 or y>8):
+                    raise valueError("Invalid input, value must be between 0 and 8")
+                if(oMove[y]==1 or xMove[y]==1):
+                    raise valueError("This position has already been marked, please choose another")            
+                oMove[y] = 1
+            except valueError as e:
+                print("Error: ",e)
         #calling function to check if any user won
         w = win(xMove,oMove)
         #printing match over if one of the user wins
