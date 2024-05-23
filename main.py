@@ -90,11 +90,11 @@ def win(x,y):
     for win in wins:
         #checking if X wins 
         if(x[win[0]]+x[win[1]]+x[win[2]]==3):
-            print("X wins")
+            print("\nCongratulations!! X wins")
             return True
         #checking if O wins
         if(y[win[0]]+y[win[1]]+y[win[2]]==3):
-            print("O wins")
+            print("\nCongratulations!! O wins")
             return True
     #returning false if no one wins
     return False
@@ -117,11 +117,11 @@ if __name__ == "__main__":
         i+=1
         #checking if all the moves has been exhausted by both the users if yes then ending the game
         if(i==10):
-            print("Match over!! it's a tie!")
+            print("\nIt's a tie!!\nThe match is over.\n")
             break
         #checking if it's X's turn and taking input from X user to mark their move
         if(turn==1):
-            print("X's turn")
+            print("\nX's turn")
             #loop for exception handling if the user keeps triggering the exception
             while(True):
                 #exception try block 
@@ -139,7 +139,7 @@ if __name__ == "__main__":
                     print("Error: ",e)
         #checking if it's O's turn and taking input from O user to mark their move
         if(turn==0):
-            print("O's turn")
+            print("\nO's turn")
             #loop for exception handling if the user keeps triggering the exception
             while(True):
                 #exception try block 
@@ -159,7 +159,7 @@ if __name__ == "__main__":
         w = win(xMove,oMove)
         #printing match over if one of the user wins
         if(w):
-            print("Match over")
+            print("The match is over.\n")
             break
         #Changing the turn of the user's
         turn = 1-turn
