@@ -87,8 +87,20 @@ if __name__ == "__main__":
     oMove = [0,0,0,0,0,0,0,0,0]
     
     print("Welcome to Tic Tac Toe\n")
+    
     #turn variable to check who's turn it is
     turn = 1
+    
+    #checking if it's X's turn and taking input from X user to mark their move
+    if(turn==1):
+        print("X's turn")
+        x = int(input("Please enter the position number where you want to mark X"))
+        xMove[x] = 1
+    #checking if it's O's turn and taking input from O user to mark their move
+    if(turn==0):
+        print("O's turn")
+        y = int(input("Please enter the position number where you want to mark O"))
+        oMove[y] = 1
         
     #calling function to print board with latest values
     printBoard(xMove, oMove)
