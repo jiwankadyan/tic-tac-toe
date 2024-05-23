@@ -127,5 +127,9 @@ if __name__ == "__main__":
             oMove[y] = 1
         #calling function to check if any user won
         w = win(xMove,oMove)
+        #printing match over if one of the user wins
+        if(w):
+            print("Match over")
+            break
         #calling function to print board with latest values
         printBoard(xMove, oMove)
