@@ -89,9 +89,16 @@ if __name__ == "__main__":
     
     #turn variable to check who's turn it is
     turn = 1
+    #a counter for how many moves has been made by both the users
+    i=0
     #while loop for changing turns for users until someone wins or all the moves has been exhausted by both users
     while(True):
-        
+        #incrementing i for one move made
+        i+=1
+        #checking if all the moves has been exhausted by both the users if yes then ending the game
+        if(i==10):
+            print("Match over!! it's a tie!")
+            break
         #checking if it's X's turn and taking input from X user to mark their move
         if(turn==1):
             print("X's turn")
